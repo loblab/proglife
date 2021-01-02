@@ -28,3 +28,8 @@ for [a 1 9] [
 
 for [n 1000 9999] [ if :n * 4 = reverse :n [show :n] ]
 
+; 1数学俱乐部 x 3 = 数学俱乐部1
+
+for [n 10000 99999] [ if (word 1 :n) * 3 = (word :n 1) [show :n] ]
+
+

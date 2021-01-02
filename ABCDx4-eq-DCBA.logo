@@ -1,0 +1,30 @@
+; method 1, random try
+
+repeat 9999 [
+  make "智 random 10
+  make "慧 random 10
+  make "数 random 10
+  make "学 random 10
+  make "智慧数学 :智*1000 + :慧*100 + :数*10 + :学
+  make "学数慧智 :学*1000 + :数*100 + :慧*10 + :智
+  if :智慧数学 * 4 = :学数慧智 [show (word :智慧数学 "x4= :学数慧智) ]
+]
+
+; method 2, full loop
+
+for [a 1 9] [
+  for [b 0 9] [
+    for [c 0 9] [
+      for [d 0 9] [
+        make "abcd :a*1000 + :b*100 + :c*10 + :d
+        make "dcba :d*1000 + :c*100 + :b*10 + :a
+        if :abcd * 4 = :dcba [ show (word :abcd "*4= :dcba) ]
+      ]
+    ]
+  ]
+]
+
+; method 3, string/number reverse
+
+for [n 1000 9999] [ if :n * 4 = reverse :n [show :n] ]
+

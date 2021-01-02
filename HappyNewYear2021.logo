@@ -1,0 +1,20 @@
+make "msg "HAPPY\ NEW\ YEAR\ 2021\
+make "txt "
+repeat 8 [ make "txt word :txt :msg ]
+make "stride 32
+make "r0 32
+make "gap 50
+make "sumdeg 0
+home
+clearscreen
+penup
+setlabelheight 30
+repeat count :txt [
+  make "r :r0 + :sumdeg / 360 * :gap
+  make "deg :stride / :r * 180 / 3.14159
+  make "sumdeg :sumdeg + :deg
+  setcolor pick [ black brown red blue green ]
+  label pop "txt forward :stride right :deg
+  wait 1
+]
+

@@ -1,0 +1,16 @@
+home clean st
+repeat 60 [penup forward 200 pendown forward 10 penup back  210 pendown right 6 ]
+setpensize 2
+repeat 12 [penup forward 190 pendown forward 20 penup back 210 pendown right 30 ]
+penup forward 215 right 90 pendown
+repeat 720 [ forward 1.8763 right 0.5]
+penup home pendown setpensize 3
+right (7 + 22/60) / 12 * 360 forward 110 back 110
+penup home pendown setpensize 2
+right 22 / 60 * 360 forward 130 back 130
+penup home pendown setpensize 1
+forward 150 back 150
+penup home right 30 - 1.5
+for [ n 1 12 ] [ penup forward 170 right 90 label :n left 90 back 170 right 30]
+ht
+

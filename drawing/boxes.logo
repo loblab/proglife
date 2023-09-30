@@ -1,0 +1,14 @@
+TO move :length
+  repeat 5 [ fd :length / 5 wait 1]
+  wait 5
+END
+
+TO boxes :length :depth
+  if :depth = 1 [ repeat 4 [move :length right 90] stop ]
+  move :length / 2 right 45
+  boxes :length / sqrt 2 :depth - 1
+  left 45 move :length / 2 right 90
+  repeat 3 [ move :length right 90]
+END
+
+st cs setxy -380 -200 clean boxes 400 8 ht

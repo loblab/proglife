@@ -1,0 +1,2 @@
+home cs lt 90 fd 240 rt 90 pu fd 58 pd
+repeat 1080 [ fd 1 rt 1 setx xcor+1 wait 0.1]
